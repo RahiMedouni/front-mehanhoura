@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+/* .navbar {
+  background-color: transparent;
+}
+
+.colorChange {
+  background-color: #000 !important;
+  } */
+
+  .App {
+    background-color: 	black;
+    max-width: 100%;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .navbarr {
+    position: sticky;
+    bottom:0;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+  } 
+
+  @media only screen and (max-width: 600px) {
+    .App {
+      background-color: 	black;
+      max-width: 100%;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .navbarr {
+      position: sticky;
+      bottom:0;
+      z-index: 1;
+      position: absolute;
+      width: 100%;
+    } 
+  }

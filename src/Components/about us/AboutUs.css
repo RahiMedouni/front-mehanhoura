@@ -1,0 +1,42 @@
+/* .aboutcolor {
+    background-color: gray;
+    background-color: rgb(250, 249, 246); 
+} */
+
+.cofounders {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    width: 100%;
+    height: 50%;
+}
+
+.founder {
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100%;
+    margin: 50px;
+    box-shadow: 4px 0px 5px 0px rgba(18,14,14,0.49);
+-webkit-box-shadow: 4px 0px 5px 0px rgba(18,14,14,0.49);
+-moz-box-shadow: 4px 0px 5px 0px rgba(18,14,14,0.49);
+}
+
+.cointerns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    width: 100%;
+    height: 50%;
+}
+
+.intern {
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100%;
+    margin: 50px;
+    box-shadow: 4px 0px 5px 0px rgba(18,14,14,0.49);
+-webkit-box-shadow: 4px 0px 5px 0px rgba(18,14,14,0.49);
+-moz-box-shadow: 4px 0px 5px 0px rgba(18,14,14,0.49);
+}

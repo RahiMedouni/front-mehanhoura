@@ -1,0 +1,820 @@
+.navbarr {
+  position: sticky;
+  top:0;
+  z-index: 1;
+} 
+
+/* .navbarr-bg {
+
+} */
+
+
+/* .change{
+  position: sticky;
+  top:0;
+  background-color: red !important;
+} */
+
+/* Navbar container */
+.firsthead {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: Arial;
+    height: 75px;
+  }
+
+  .firsthead-bg {
+    background-color: rgba(0, 64, 170, 0.7);
+  }
+
+  
+  
+header nav {
+  margin-top: 5px;
+}
+
+.logo {
+    float: left;
+    color: #FFD720;
+    /* margin-left: 0px; */
+    margin-left: 50px;
+    margin-right: 100px;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 32px;
+    /* color: #f9f9f9; */
+}
+
+.lang {
+    float: right;
+    margin: 20px 20px 15px 10px;
+    padding: 5px;
+
+}
+
+
+.androidbtnav {
+  width: 100px;
+  height: 30px;
+  padding: 0px;
+  font-size: 14px;
+  border: 0px;
+  border-radius: 15px 0px 0px 15px;
+  color: #0040AA;
+  background-color: #FFD720;
+}
+
+.iosbtnav {
+  width: 100px;
+  height: 30px;
+  padding: 0px;
+  font-size: 14px;
+  border: 0px;
+  border-radius: 0px 15px 15px 0px;
+  color: #FFD720;
+  background-color: #0040AA;
+}
+
+
+.imglink1 a img {
+    float: right;
+    height: 60px;
+    width: 150px;
+    border: 10px;
+    margin: 10px 40px 15px 30px;
+}
+
+.imglink2 a img {
+  float: right;
+  height: 40px;
+  width: 130px;
+  border: 10px;
+  margin: 20px 30px 15px 30px;
+}
+
+  /* Links inside the navbar */
+  .navlinks a {
+    float: left;
+    font-size: 14px;
+    width: 80px;
+    color: #FFD720;
+    text-align: center;
+    margin-bottom: 5px;
+    text-decoration: none;
+    padding: 25px 10px;
+    font-weight: bold;
+  }
+  
+  /* The dropdown container */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    color: #FFD720;
+    padding: 25px 10px;
+    background-color: inherit;
+    font: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+
+  .langdropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    float: right;
+    overflow: hidden;
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-right: 50px;
+  }
+
+  /* Dropdown button */
+  .langdropdown .langdropbtn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+    width: 60px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    color: #FFD720;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+    background-color: inherit;
+    font: inherit; /* Important for vertical align on mobile phones */
+    /* margin: 0; Important for vertical align on mobile phones */
+  }
+
+  /* arrow-down */
+
+  .arrow {
+    border: solid #FFD720;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-bottom: 3px;
+    margin-left: 3px;
+  }
+
+  .dropdown:hover .down {
+    border: solid #0040AA;
+    border-width: 0 3px 3px 0;
+  }
+
+  .langdropdown:hover .down {
+    border: solid #0040AA;
+    border-width: 0 3px 3px 0;
+  }
+
+
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  
+  
+  /* Add a yellow background color to navbar links on hover */
+  .navbarr a:hover, .dropdown:hover .dropbtn {
+    background-color: #FFD720;
+    color: #0040AA;
+  }
+  /* add a background to language links */
+  .langdropdown:hover .langdropbtn {
+    background-color: #0040AA;
+    color: #FFD720;
+  }
+
+
+  nav {
+    right: 00px;
+  }
+
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    z-index: 1;
+  }
+
+  /* language Dropdown (hidden by default) */
+  .langdropdown-content {
+    margin-top: 145px;
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    width: 40px;
+    height: 100px;
+    z-index: 1;
+  }
+  
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+    text-align: center;
+  }
+  
+  /* Show the language dropdown menu on hover */
+  .langdropdown:hover .langdropdown-content {
+    display: block;
+    text-align: center;
+  }
+
+  /* Create two equal columns that floats next to each other */
+  .column {
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    width: 99%;
+    height: 200px;
+    padding: 10px;
+    background-color: #0040AA;
+    color: #FFD720;
+  }
+
+  .bricool {
+    width: 99%;
+  }
+  
+  /* Style links inside the columns */
+  .column a {
+    float: none;
+    color: #FFD720;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a background color on hover */
+  
+  .column a:hover {
+    background-color: #FFD720;
+    color: #0040AA;
+  }
+
+  /* Create a column */
+  .langcolumn {
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    width: 99%;
+    padding: 10px;
+    background-color: #0040AA;
+    color: #ffd720;
+  }
+
+  .langbricool {
+    width: 100%;
+  }
+  
+  /* Style links inside the language columns */
+  .langcolumn a {
+    float: none;
+    color: #ffd720;
+    padding:  22px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+
+
+  @media only screen and (max-width: 600px) {
+    .firsthead {
+      overflow: hidden;
+      background-color: rgba(0, 0, 0, 0);
+      font-family: Arial;
+      height: 40px;
+    }
+  
+    .firsthead-bg {
+      background-color: rgba(0, 64, 170, 0.7);
+    }
+  
+    
+    
+  header nav {
+    margin-top: 2px;
+  }
+  
+  .logo {
+      float: left;
+      color: #FFD720;
+      /* margin-left: 0px; */
+      margin-left: 5px;
+      margin-right: 10px;
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 16px;
+      /* color: #f9f9f9; */
+  }
+  
+  .lang {
+      /* float: right; */
+      margin: 10px 10px 8px 5px;
+      padding: 2px;
+  
+  }
+  
+  
+  .androidbtnav {
+    width: 30px;
+    height: 15px;
+    padding: 0px;
+    font-size: 7px;
+    border: 0px;
+    border-radius: 7px 0px 0px 7px;
+    color: #0040AA;
+    background-color: #FFD720;
+  }
+  
+  .iosbtnav {
+    width: 30px;
+    height: 15px;
+    padding: 0px;
+    font-size: 7px;
+    border: 0px;
+    border-radius: 0px 7px 7px 0px;
+    color: #FFD720;
+    background-color: #0040AA;
+  }
+  
+    /* Links inside the navbar */
+    .navlinks a {
+      float: left;
+      font-size: 7px;
+      width: 40px;
+      color: #FFD720;
+      text-align: center;
+      margin-bottom: 2px;
+      text-decoration: none;
+      padding: 15px 5px;
+      font-weight: bold;
+    }
+    
+    /* The dropdown container */
+    .dropdown {
+      float: left;
+      overflow: hidden;
+      font-size: 7px;
+      margin-bottom: 2px;
+      font-weight: bold;
+    }
+  
+    /* Dropdown button */
+    .dropdown .dropbtn {
+      font-size: 9px;
+      font-weight: bold;
+      border: none;
+      outline: none;
+      color: #FFD720;
+      padding: 15px 5px;
+      background-color: inherit;
+      font: inherit; /* Important for vertical align on mobile phones */
+      margin: 0; /* Important for vertical align on mobile phones */
+    }
+  
+    .langdropdown {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      float: right;
+      overflow: hidden;
+      font-size: 9px;
+      margin-bottom: 5px;
+      margin-right: 25px;
+    }
+  
+    /* Dropdown button */
+    .langdropdown .langdropbtn {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 9px;
+      width: 30px;
+      font-weight: bold;
+      border: none;
+      outline: none;
+      color: #FFD720;
+      padding: 10px 5px;
+      margin-bottom: 10px;
+      background-color: inherit;
+      font: inherit; /* Important for vertical align on mobile phones */
+      /* margin: 0; Important for vertical align on mobile phones */
+    }
+  
+    /* arrow-down */
+  
+    .arrow {
+      border: solid #FFD720;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 1px;
+      margin-bottom: 1px;
+      margin-left: 1px;
+    }
+  
+    .dropdown:hover .down {
+      border: solid #0040AA;
+      border-width: 0 1px 1px 0;
+    }
+  
+    .langdropdown:hover .down {
+      border: solid #0040AA;
+      border-width: 0 1px 1px 0;
+    }
+  
+  
+    .down {
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+    }
+    
+    
+    /* Add a yellow background color to navbar links on hover */
+    .navbarr a:hover, .dropdown:hover .dropbtn {
+      background-color: #FFD720;
+      color: #0040AA;
+    }
+    /* add a background to language links */
+    .langdropdown:hover .langdropbtn {
+      background-color: #0040AA;
+      color: #FFD720;
+    }
+  
+  
+    nav {
+      right: 00px;
+    }
+  
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0);
+      width: 100%;
+      height: 100%;
+      left: 0;
+      z-index: 1;
+    }
+  
+    /* language Dropdown (hidden by default) */
+    .langdropdown-content {
+      margin-top: 145px;
+      display: none;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0);
+      width: 20px;
+      height: 50px;
+      z-index: 1;
+    }
+    
+    
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+      text-align: center;
+    }
+    
+    /* Show the language dropdown menu on hover */
+    .langdropdown:hover .langdropdown-content {
+      display: block;
+      text-align: center;
+    }
+  
+    /* Create two equal columns that floats next to each other */
+    .column {
+      display: flex;
+      justify-content: flex-start;
+      text-align: center;
+      width: 99%;
+      height: 100px;
+      padding: 5px;
+      background-color: #0040AA;
+      color: #FFD720;
+    }
+  
+    .bricool {
+      width: 99%;
+    }
+    
+    /* Style links inside the columns */
+    .column a {
+      float: none;
+      color: #FFD720;
+      text-decoration: none;
+      padding: 5px;
+      display: block;
+      text-align: left;
+    }
+    
+    /* Add a background color on hover */
+    
+    .column a:hover {
+      background-color: #FFD720;
+      color: #0040AA;
+    }
+  
+    /* Create a column */
+    .langcolumn {
+      display: flex;
+      justify-content: flex-start;
+      text-align: center;
+      width: 99%;
+      padding: 5px;
+      background-color: #0040AA;
+      color: #ffd720;
+    }
+  
+    .langbricool {
+      width: 100%;
+    }
+    
+    /* Style links inside the language columns */
+    .langcolumn a {
+      float: none;
+      color: #ffd720;
+      padding:  12px;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+    }
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .firsthead {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: Arial;
+    height: 40px;
+  }
+
+  .firsthead-bg {
+    background-color: rgba(0, 64, 170, 0.7);
+  }
+
+  
+  
+header nav {
+  margin-top: 2px;
+}
+
+.logo {
+    float: left;
+    color: #FFD720;
+    /* margin-left: 0px; */
+    margin-left: 5px;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    /* color: #f9f9f9; */
+}
+
+.lang {
+    /* float: right; */
+    margin: 10px 10px 8px 5px;
+    padding: 2px;
+
+}
+
+
+.androidbtnav {
+  width: 30px;
+  height: 15px;
+  padding: 0px;
+  font-size: 7px;
+  border: 0px;
+  border-radius: 7px 0px 0px 7px;
+  color: #0040AA;
+  background-color: #FFD720;
+}
+
+.iosbtnav {
+  width: 30px;
+  height: 15px;
+  padding: 0px;
+  font-size: 7px;
+  border: 0px;
+  border-radius: 0px 7px 7px 0px;
+  color: #FFD720;
+  background-color: #0040AA;
+}
+
+  /* Links inside the navbar */
+  .navlinks a {
+    float: left;
+    font-size: 7px;
+    width: 40px;
+    color: #FFD720;
+    text-align: center;
+    margin-bottom: 2px;
+    text-decoration: none;
+    padding: 15px 5px;
+    font-weight: bold;
+  }
+  
+  /* The dropdown container */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+    font-size: 7px;
+    margin-bottom: 2px;
+    font-weight: bold;
+  }
+
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 9px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    color: #FFD720;
+    padding: 15px 5px;
+    background-color: inherit;
+    font: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+
+  .langdropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    float: right;
+    overflow: hidden;
+    font-size: 9px;
+    margin-bottom: 5px;
+    margin-right: 25px;
+  }
+
+  /* Dropdown button */
+  .langdropdown .langdropbtn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 9px;
+    width: 30px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    color: #FFD720;
+    padding: 10px 5px;
+    margin-bottom: 10px;
+    background-color: inherit;
+    font: inherit; /* Important for vertical align on mobile phones */
+    /* margin: 0; Important for vertical align on mobile phones */
+  }
+
+  /* arrow-down */
+
+  .arrow {
+    border: solid #FFD720;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 1px;
+    margin-bottom: 1px;
+    margin-left: 1px;
+  }
+
+  .dropdown:hover .down {
+    border: solid #0040AA;
+    border-width: 0 1px 1px 0;
+  }
+
+  .langdropdown:hover .down {
+    border: solid #0040AA;
+    border-width: 0 1px 1px 0;
+  }
+
+
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  
+  
+  /* Add a yellow background color to navbar links on hover */
+  .navbarr a:hover, .dropdown:hover .dropbtn {
+    background-color: #FFD720;
+    color: #0040AA;
+  }
+  /* add a background to language links */
+  .langdropdown:hover .langdropbtn {
+    background-color: #0040AA;
+    color: #FFD720;
+  }
+
+
+  nav {
+    right: 00px;
+  }
+
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    z-index: 1;
+  }
+
+  /* language Dropdown (hidden by default) */
+  .langdropdown-content {
+    margin-top: 145px;
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    width: 20px;
+    height: 50px;
+    z-index: 1;
+  }
+  
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+    text-align: center;
+  }
+  
+  /* Show the language dropdown menu on hover */
+  .langdropdown:hover .langdropdown-content {
+    display: block;
+    text-align: center;
+  }
+
+  /* Create two equal columns that floats next to each other */
+  .column {
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    width: 99%;
+    height: 100px;
+    padding: 5px;
+    background-color: #0040AA;
+    color: #FFD720;
+  }
+
+  .bricool {
+    width: 99%;
+  }
+  
+  /* Style links inside the columns */
+  .column a {
+    float: none;
+    color: #FFD720;
+    text-decoration: none;
+    padding: 5px;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a background color on hover */
+  
+  .column a:hover {
+    background-color: #FFD720;
+    color: #0040AA;
+  }
+
+  /* Create a column */
+  .langcolumn {
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    width: 99%;
+    padding: 5px;
+    background-color: #0040AA;
+    color: #ffd720;
+  }
+
+  .langbricool {
+    width: 100%;
+  }
+  
+  /* Style links inside the language columns */
+  .langcolumn a {
+    float: none;
+    color: #ffd720;
+    padding:  12px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+}

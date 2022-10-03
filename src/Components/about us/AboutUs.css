@@ -1,7 +1,50 @@
-/* .aboutcolor {
-    background-color: gray;
-    background-color: rgb(250, 249, 246); 
-} */
+.firstsection {
+    margin-top: -75px;
+    height: 105vh;
+    text-align: center;
+}
+
+.secondsectionabout {
+    margin-top: 0px;
+    background-color: white;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.sarlmehanhoura {
+    background-color: whitesmoke;
+    margin-top: 100px;
+    height: 100vh;
+    width: 150vh;
+    box-shadow: 5px 5px 5px 5px rgb(211,211,211);
+}
+
+.sarlmehanhoura img {
+    float: left;
+    margin-right: 30px;
+    height: 50vh;
+    width: 50vh;
+}
+
+.sarlmehanhoura p {
+    text-align: justify;
+    margin: 0px;
+    padding: 0px 50px 50px 50px;
+    font-size: 18px;
+}
+
+.thirdsection {
+    margin-top: 0px;
+          background-color: white;
+          height: 120vh;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+}
 
 .cofounders {
     display: flex;
@@ -40,3 +83,124 @@
 -webkit-box-shadow: 4px 0px 5px 0px rgba(18,14,14,0.49);
 -moz-box-shadow: 4px 0px 5px 0px rgba(18,14,14,0.49);
 }
+
+.founderteam {
+    margin-top: 200px;
+}
+
+
+@media screen and (max-width: 600px) {
+    .firstsection {
+        margin-top: -50px;
+        height: 70vh;
+        text-align: center;
+    }
+    
+    .secondsectionabout {
+        margin-top: 0px;
+        background-color: white;
+        height: 70vh;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .sarlmehanhoura {
+        background-color: whitesmoke;
+        margin-top: 50px;
+        height: 100%;
+        width: 80%;
+        box-shadow: 3px 3px 3px 3px rgb(211,211,211);
+    }
+    
+    .sarlmehanhoura img {
+        float: left;
+        margin-right: 15px;
+        height: 20%;
+        width: 20%;
+    }
+
+    .sarlmehanhoura h1 {
+        font-size: 14px;
+    }
+    
+    .sarlmehanhoura p {
+        text-align: justify;
+        margin: 0px;
+        padding: 0px 20px 20px 20px;
+        font-size: 10px;
+    }
+    
+    .thirdsection {
+        margin-top: 0px;
+              background-color: white;
+              height: 70vh;
+              text-align: center;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+    }
+    
+    .cofounders {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: black;
+        width: 100%;
+        height: 60%;
+    }
+    
+    .founder {
+        background-color: whitesmoke;
+        width: 100%;
+        height: 100%;
+        margin: 20px;
+        box-shadow: 4px 0px 5px 0px rgba(18,14,14,0.49);
+    -webkit-box-shadow: 4px 0px 5px 0px rgba(18,14,14,0.49);
+    -moz-box-shadow: 4px 0px 5px 0px rgba(18,14,14,0.49);
+    }
+
+    .founder h1 {
+        font-size: 12px;
+    }
+
+    .founder p {
+        font-size: 9px;
+    }
+
+    .founderteam {
+        margin-top: 100px;
+    }
+    
+    .cointerns {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: black;
+        width: 100%;
+        height: 60%;
+    }
+    
+    .intern {
+        background-color: whitesmoke;
+        width: 100%;
+        height: 100%;
+        margin: 20px;
+        box-shadow: 4px 0px 5px 0px rgba(18,14,14,0.49);
+    -webkit-box-shadow: 4px 0px 5px 0px rgba(18,14,14,0.49);
+    -moz-box-shadow: 4px 0px 5px 0px rgba(18,14,14,0.49);
+    }
+
+    .intern h1 {
+        font-size: 12px;
+    }
+
+    .intern p {
+        font-size: 9px;
+    }
+
+    .team {
+        margin-top: 0px;
+    }
+  }

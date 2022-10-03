@@ -8,16 +8,16 @@ import AndroidIcon from '@mui/icons-material/Android';
 import AppleIcon from '@mui/icons-material/Apple';
 
   
-  const Navbar = (scrollToTop) => {
+  const Navbar = (scrollToTop, props) => {
 
-    // const myFunction = () => {
-    //   var x = document.getElementById("myTopnav");
-    //   if (x.className === "topnav") {
-    //     x.className += " responsive";
-    //   } else {
-    //     x.className = "topnav";
-    //   }
-    // };
+    const myFunction = () => {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "navlinks") {
+        x.className += " responsive";
+      } else {
+        x.className = "navlinks";
+      }
+    };
 
     
 useEffect(() => {
@@ -38,23 +38,23 @@ useEffect(() => {
 
     window.addEventListener('scroll', changeColor)
 
-    //&#8801;
+    //
 
     return (
       <div className="navbarr">
         <header className={colornav ? 'firsthead firsthead-bg' : 'firsthead' }>
           <div style={{
           }}>
-          {/* <img src="../logotrans.png" style={{
+         <img src="../logotrans.png" style={{
             float: "left",
             marginLeft: 10,
             marginTop: 19,
             height: 26.38,
             width: 83.7,
-          }}/> */}
+          }}/> 
        <span   onClick={scrollToTop}> <Link to="/"><h2 className="logo">Mehan Houra</h2></Link> </span>
         </div>
-        <nav className="navv">
+        <nav className="navv" id="myTopnav">
         <div className="navlinks">
         <span   onClick={scrollToTop}><Link to="/about/">About Us</Link></span>
         </div>
@@ -84,6 +84,9 @@ useEffect(() => {
       <span   onClick={scrollToTop}> <Link to="/blog/">Blog</Link> </span>
       <a href="#contacts">Contact Us</a>
       <a href="#howto">How To?</a>
+      <a href="javascript:void(0);" className="icon" onClick={myFunction}>
+      &#8801;
+         </a>
         </div>
         </nav>
         <div>
@@ -116,19 +119,7 @@ useEffect(() => {
   
   // <LanguageIcon />
 
-//   import React from "react";
-// import { Link } from "react-router-dom";
-// import "./index.css";
 
-// function Header() {
-//   const myFunction = () => {
-//     var x = document.getElementById("myTopnav");
-//     if (x.className === "topnav") {
-//       x.className += " responsive";
-//     } else {
-//       x.className = "topnav";
-//     }
-//   };
 
 //   return (
 //     <nav>

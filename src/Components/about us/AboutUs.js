@@ -1,62 +1,25 @@
 import "./AboutUs.css";
 import Founders from "./Founders";
 import Interns from "./Interns";
-
+import PartnersSlide from "../partners/PartnersSlide";
+import images from "../partners/BlogCoverCard";
 
   const AboutUs= () => {
 
     return (
-      <div style={{
-      }} className="aboutus">
+      <>
          <section style={{
         backgroundImage: `url("../cover2.jpeg")`,
-        marginTop: -100,
         backgroundRepeat: 'no-repeat',
         backgroundSize: "cover",
-        height: '105vh',
-        textAlign: "center",
+        backgroundPosition:"center",
       }} className="firstsection">
-        {/* <div className="slogan">
-      <h1 style={{ marginTop: 200 }}>construction Renovation Aménagement<br />la Réparation, notre Passion
-      </h1>
-      <h3>Download The App</h3>
-      <span style={{ display: "flex", flexDirection: "row" }}><button className="androidbtn">Android version</button>
-      <button className="iosbtn">IOS version</button></span>
-      </div> */}
         </section>
-        <section style={{
-        marginTop: 0,
-        backgroundColor: "white",
-        height: '130vh',
-        textAlign: "center",
-        display: "flex",
-        justifyContent: "center",
-      }} className="secondsection">
-        <span style={{
-          backgroundColor: "whitesmoke",
-          marginTop: 100,
-          height: "100vh",
-          width: "150vh",
-          boxShadow: "5px 5px 5px 5px rgb(211,211,211)",
-        }}>
-          <img src="../cover1.jpeg" alt="cover" style={{
-            float: "left",
-            marginRight: 30,
-            height: "50vh",
-            width: "50vh",
-          }}/>
-          <div style={{
-            height: 50
-          }}>
+        <section className="secondsectionabout">
+        <span className="sarlmehanhoura" >
+          <img src="../cover1.jpeg" alt="cover" />
           <h1 align="center">Sarl Mehan Houra</h1>
-          </div>
-          <p style={{
-            textAlign: "justify",
-            margin: 0,
-            padding: "0px 50px 50px 50px" ,
-
-            fontSize: 18
-          }}>On n’est jamais à l’abri d’une fuite au niveau de notre installation de plomberie, problème d'installation électrique ,un four qui reste froid alors qu’on essaye de préparer un repas de famille ou un frigo qui ne fonctionne plus et laisse tous les produits frais se perdre ...
+          <p>On n’est jamais à l’abri d’une fuite au niveau de notre installation de plomberie, problème d'installation électrique ,un four qui reste froid alors qu’on essaye de préparer un repas de famille ou un frigo qui ne fonctionne plus et laisse tous les produits frais se perdre ...
 
 Que faire à ce moment-là ?
 
@@ -106,29 +69,24 @@ Par un appel téléphonique sur : +213 6.56.29.87.02
         </span>
         </section>
 
-        <section style={{
-          marginTop: -30,
-          backgroundColor: "white",
-          height: '120vh',
-          textAlign: "center",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center"
-        
-        }} className="secondsection">
+        <section className="thirdsection">
           <Founders />
         </section>
-        <section style={{
-          marginTop: -30,
-          backgroundColor: "white",
-          height: '120vh',
-          textAlign: "center",
-        
-        }} className="secondsection">
+        <section className="thirdsection">
           <Interns />
         </section>
-    </div>
+        <section style={{
+        marginTop: 0,
+        backgroundColor: "whitesmoke",
+        height: '40vh',
+        textAlign: "center",
+      }} className="secondsection">
+         <PartnersSlide
+        images={images} style={{
+          marginTop: 50
+        }} />
+        </section>
+    </>
     );
   };
 

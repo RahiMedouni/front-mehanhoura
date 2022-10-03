@@ -1,4 +1,16 @@
+.firstsection {
+  margin-top: -75px;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+}
 
+.secondsection {
+  margin-top: 0;
+  background-color: whitesmoke;
+  height: 120vh;
+  text-align: center;
+}
 
 .androidbtn {
     width: 150px;
@@ -9,6 +21,10 @@
     border-radius: 20px 0px 0px 20px;
     color: #0040AA;
     background-color: #FFD720;
+}
+
+.icons {
+  font-size: 24px;
 }
 
 .btnspan {
@@ -31,7 +47,7 @@
 
 .btndiv {
     margin-bottom: 120px;
-    margin-left: 100px;
+    margin-right: 50px;
 }
 
 .downloadapp {
@@ -63,6 +79,33 @@
     align-items: center;
 }
 
+.videopub {
+  margin-top: 100px;
+  margin-right: 50px;
+  width: 50%;
+  height: 300px;
+}
+
+.textpub {
+  margin-top: 150px;
+  margin-left: 50px;
+  width: 50%;
+}
+
+.textpub h1 {
+  color: #13191E;
+  font-size: 60px;
+  margin: 0px 0px 8px;
+  text-align: left;
+}
+
+.textpub p {
+  color: #13191E;
+  font-size: 22px;
+  margin: 0px 0px 48px;
+  text-align: justify;
+}
+
 
 .thirdsection {
     z-index: 0,
@@ -88,6 +131,11 @@
     font-weight: bolder;
     font-size: 44px;
   }
+
+  .spandiv {
+    font-size: 48px;
+  }
+
   .textdiv:first-of-type{
     animation: slide 6s infinite;
   }
@@ -118,4 +166,179 @@
     30%{width: 655px;}
     80%{opacity: 1;}
     100%{opacity: 0; width: 655px;}
+  }
+
+
+
+  @media screen and (max-width: 600px) {
+
+    .firstsection {
+      margin-top: -50px;
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+    }
+
+    .secondsection {
+      margin-top: 0;
+      background-color: whitesmoke;
+      height: 80vh;
+      text-align: center;
+    }
+    
+
+    .androidbtn {
+      width: 100px;
+      height: 30px;
+      padding: 0px;
+      font-size: 9px;
+      border: 0px;
+      border-radius: 10px 0px 0px 10px;
+      color: #0040AA;
+      background-color: #FFD720;
+  }
+
+  .icons {
+    font-size: 9px;
+  }
+  
+  .btnspan {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+  }
+  
+  .iosbtn {
+      width: 100px;
+      height: 30px;
+      padding: 0px;
+      font-size: 9px;
+      border: 0px;
+      border-radius: 0px 10px 10px 0px;
+      color: #FFD720;
+      background-color: #0040AA;
+  }
+  
+  .btndiv {
+      margin-bottom: 20px;
+      margin-right: 130px;
+  }
+  
+  .downloadapp {
+      font-size: 11px;
+      color: #FFD720;
+      margin-bottom: 5px;
+      margin-top: 35px;
+      margin-bottom: 10px;
+      font-weight: bold;
+  }
+  
+  .slogan {
+      display: flex;
+      color: white;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      text-align: center;
+      letter-spacing: 2px;
+      font-weight: bolder;
+  }
+  
+  .pub {
+      display: flex;
+      color: #0040AA;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .videopub {
+    margin-top: 0px;
+    margin-right: 0px;
+    width: 80%;
+    height: 150px;
+  }
+  
+  .textpub {
+    margin-top: 50px;
+    margin-left: 15px;
+    width: 90%;
+  }
+  
+  .textpub h1 {
+    color: #13191E;
+    font-size: 22px;
+    margin: 0px 0px 8px;
+    text-align: center;
+  }
+  
+  .textpub p {
+    color: #13191E;
+    font-size: 11px;
+    margin: 0px 0px 24px;
+    text-align: justify;
+  }
+  
+  
+  
+  .thirdsection {
+      z-index: 0,
+  }
+  
+  /* .firstsection {
+      filter:brightness(0.7); 
+    -webkit-filter:brightness(0.7);    
+    left:0;top:0;bottom:0;right:0; 
+  } */
+  
+  
+  .slogantext {
+      font-size: 24;
+  }
+
+  .spandiv {
+    font-size: 18px;
+  }
+  
+  .textdiv{
+      margin-top: 130px;
+      display: block;
+      overflow: hidden;
+      padding-top: 25vh;
+      font-weight: bolder;
+      font-size: 22px;
+    }
+    .textdiv:first-of-type{
+      animation: slide 6s infinite;
+    }
+    .textdiv:last-of-type{
+      animation: slide 6s infinite;
+    }
+    .textdiv:last-of-type span {
+      font-size: 18px;
+      color: #808000;
+      animation: slide 6s infinite;
+    }
+  
+    @keyframes appear{
+      0%{opacity: 0;}
+      20%{opacity: 1;}
+      80%{opacity: 1;}
+      100%{opacity: 0;}
+    }
+    @keyframes slide{
+      0%{margin-left:-3000px;}
+      20%{margin-left:0px;}
+      35%{margin-left:0px;}
+    100%{margin-left:0px;}
+    }
+    @keyframes reveal{
+      0%{opacity: 0; width: 0px;}
+      20%{opacity: 1; width: 0px;}
+      30%{width: 355px;}
+      80%{opacity: 1;}
+      100%{opacity: 0; width: 355px;}
+    }
   }

@@ -8,7 +8,7 @@ const ImageSlider = ({images}) => {
 
 const settings = {
 	infinite: true,
-	arrows: true,
+	arrows: false,
 	dots: true,
 	slidesToShow: 1,
 	slidesToScroll: 1,
@@ -23,7 +23,7 @@ return (
 	<section>
 	<div className="imgslider" style={{
 		marginLeft: 100,
-		marginTop: 0,
+		marginTop: -75,
 		marginRight: 100,
 	}}>
 		<Slider {...settings}>
@@ -32,6 +32,7 @@ return (
 			<img src={item.src} alt={item.alt} style={{
 				height: "48.7vh",
 				width: "100%",
+				marginTop: 100
 			}} />
 			<div className="top-left">
 			<h1>article title</h1>

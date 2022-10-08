@@ -24,10 +24,10 @@ const HomePage= () => {
       </div>
       <h3 className="downloadapp">Download The App</h3>
       <div>
-        <button className="androidbtn">
+      <a href="https://www.mehanhoura.com/" target="_blank"><button className="androidbtn">
           <span className='btnspan'>Android version <AndroidIcon className="icons" /></span>
-        </button>
-      <button className="iosbtn">
+        </button></a>
+      <button disabled= {true} className="iosbtn">
         <span className='btnspan'>IOS version <AppleIcon className="icons" />
       </span>
       </button>
@@ -49,8 +49,10 @@ const HomePage= () => {
           <div>
       <span style={{ display: "flex", flexDirection: "row", float: "right" }}>
         <div className="btndiv">
-        <button className="androidbtn"><span className='btnspan'>Android version <AndroidIcon/></span></button>
-      <button className="iosbtn"> <span className='btnspan'>IOS version <AppleIcon/></span></button>
+        <a href="https://www.mehanhoura.com/" target="_blank"><button className="androidbtn">
+          <span className='btnspan'>Android version <AndroidIcon/></span>
+          </button></a>
+      <button disabled= {true} className="iosbtn"> <span className='btnspan'>IOS version <AppleIcon/></span></button>
       </div>
       </span>
       </div>
@@ -62,7 +64,8 @@ const HomePage= () => {
         backgroundColor: "whitesmoke",
         height: '40vh',
         textAlign: "center",
-      }} className="secondsection">
+        marginTop: -10
+      }}>
          <PartnersSlide
         images={images} style={{
           marginTop: 50

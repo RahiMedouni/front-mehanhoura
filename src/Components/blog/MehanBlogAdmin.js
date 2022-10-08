@@ -89,6 +89,8 @@ const MehanBlog = () => {
           },
       ]);
 
+      
+
       const handleAddArticle = (newArticle) => {
         setArticles([...articles, newArticle]);
       };
@@ -96,8 +98,9 @@ const MehanBlog = () => {
       const BlogsCards = ({ articles, title }) => {
         return (
           <div>
+            <AddArticle handleAddArticle={handleAddArticle} />
             <BlogCards
-            articles={articles}
+              articles={articles}
               handleAddArticle={handleAddArticle}
             />
           </div>
@@ -109,9 +112,8 @@ const MehanBlog = () => {
 return (
     <div>
 	<div style={{
-        height: "70vh",
+        height: "60vh",
         width: "100%",
-        backgroundColor: "#0040AA"
     }}>
         <ImageSlider
         images={images} />

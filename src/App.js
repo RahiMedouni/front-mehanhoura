@@ -8,6 +8,8 @@ import {
 import HomePage from './Components/home page/HomePage';
 import React, { useEffect, useState } from 'react';
 import MehanBlog from './Components/blog/MehanBlog';
+import MehanBlogAdmin from './Components/blog/MehanBlogAdmin';
+import ContactUs from './Components/contact us/ContactUs';
 import images from "./Components/blog/BlogCoverCard";
 import CopyrightOutlinedIcon from '@mui/icons-material/CopyrightOutlined';
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
@@ -15,10 +17,20 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import { display } from '@mui/system';
+import HowTo from './Components/onDoing/HowTo';
+import CreateRequest from './Components/onDoing/CreateRequest';
+import Handymen from './Components/onDoing/Handymen';
+import Bricool from './Components/onDoing/bricool';
+import Promo from './Components/onDoing/Promo';
+import SignUpAdmin from "./Components/admins/SignUpAdmin";
+import SigninAdmin from "./Components/admins/SigninAdmin";
 import PopUp from './Components/PopUp';
+import PopUps from './Components/PopUps';
+import { useNavigate } from "react-router-dom";
 
-const TikTokIcon = ({ color = "#000000" }) => {
+
+
+const TikTokIcon = ({ color = "white" }) => {
   return (
     <svg
       fill={color}
@@ -34,29 +46,64 @@ const TikTokIcon = ({ color = "#000000" }) => {
 
 function App() {
 
-  const [showVideo, setShowVideo] = useState(false);
+  const [accountType, setAccountType] = useState("");
 
-  useEffect( () => {
-    setInterval( () => {
-      setShowVideo(!showVideo)
-    }, 5000 );
-  }, []);
+  const navigate = useNavigate();
+
+  // const [showVideo, setShowVideo] = useState(false);
+
+  // useEffect( () => {
+  //   setInterval( () => {
+  //     setShowVideo(!showVideo)
+  //   }, 5000 );
+  // }, []);
 
 //  const closeVideo = 
+
+const accountTypeHandler = (type) => {
+  setAccountType(type);
+};
+
+useEffect(() => {
+  let token = localStorage.getItem("token");
+  if (!token) navigate("/");
+}, []);
 
   return (
     <div className="App">
       <header className='navbarr'>
       < Navbar />
+      {/* {accountType === "admin" ? <PopUps /> : <PopUp/>} */}
       </header>
       {/* <div>
         { showVideo && <PopUp /> } 
-      </div> */}
+      </div>  */}
       <Routes>
       <Route path="/" element={< HomePage />} />
       <Route path="/about" element={< AboutUs />} />
-      <Route path="/blog" element={< MehanBlog images={images} />} />
+      <Route path="/blog" element={
+        accountType === "admin" ? (
+      < MehanBlogAdmin images={images} /> )
+      :(
+        < MehanBlog images={images} /> )
+      }
+      />
+      <Route path="/demandes" element={<CreateRequest />} />
+      <Route path="/artisans" element={<Handymen />} />
+      <Route path="/comment" element={<HowTo />} />
+      <Route path="/bricool" element={<Bricool />} />
+      <Route path="/promo" element={<Promo />} />
+      <Route path="/contactus" element={<ContactUs />} />
+      <Route
+              path="/ramirahimazehitiornasignup"
+              element={<SignUpAdmin accountType={accountTypeHandler} />}
+            />
+            <Route
+              path="/ramirahimazehitiornasignin"
+              element={<SigninAdmin accountType={accountTypeHandler} />}
+            />
     </Routes>
+
     <footer style={{
       backgroundColor: "#0040AA",
       marginTop: -30,
@@ -83,26 +130,33 @@ function App() {
         justifyContent: "center",
         alignItems: "center"
       }}>
-             <CopyrightOutlinedIcon />
+             <CopyrightOutlinedIcon sx={{ color: "white" }} />
              <p style={{
-              marginRight: 10
-             }}>Copyrights</p>
+              marginRight: 10,
+              color: "white"
+             }}>Copyrights 2020</p>
              <p style={{
               marginLeft: 10,
-              marginRight: 10
+              marginRight: 10,
+              color: "whitesmoke"
              }}>|</p>
+            <a href='https://mehanhoura.com/privacy.html?fbclid=IwAR1OvM-9t6pg1nJq8_TInwiA0PgVKeP6BHRo-igCcnM-u0PCXU6gTWTGZKk'>
+               <p style={{
+              marginLeft: 10,
+              marginRight: 10,
+              color: "white"
+             }}>Privacy</p> </a>
              <p style={{
               marginLeft: 10,
-              marginRight: 10
-             }}>Privacy</p>
-             <p style={{
-              marginLeft: 10,
-              marginRight: 10
+              marginRight: 10,
+              color: "whitesmoke"
              }}>|</p>
+             <a href='https://mehanhoura.com/terms.html?fbclid=IwAR2m0vY7mr9OXtn3DUYSB32Kjhl_G2d5R3s3SLMBfraCaBS3MPVXnl3pJh4' >
              <p style={{
               marginLeft: 10,
-              marginRight: 10
-             }}>Terms</p>
+              marginRight: 10,
+              color: "white"
+             }}>Terms</p> </a>
           </span>
           <span style={{
         width: "100%",
@@ -111,13 +165,13 @@ function App() {
         justifyContent: "center",
         alignItems: "center"
       }}>
-             <CopyrightOutlinedIcon />
-             <FacebookOutlinedIcon />
-             <InstagramIcon />
-             <LinkedInIcon />
-             <YouTubeIcon />
-             <TikTokIcon/>
-             <TwitterIcon />
+        
+             <a href='https://web.facebook.com/search/top?q=mehanhoura%20-%20%D9%85%D9%87%D9%86%20%D8%AD%D8%B1%D8%A9' target="_blank"><FacebookOutlinedIcon sx={{color: "white"}} /> </a>
+             <a href='https://www.instagram.com/mehanhoura/' target="_blank"> <InstagramIcon sx={{color: "white"}} /> </a>
+             <a href='https://www.linkedin.com/company/mehan-houra' target="_blank"> <LinkedInIcon sx={{color: "white"}} /> </a>
+            <a href='https://www.youtube.com/channel/UCFujFIFG1DrfIRLR7HoI1xQ' target="_blank"> <YouTubeIcon sx={{ color: "white" }}/> </a>
+             <a href='https://www.tiktok.com/@mehanhoura?_t=8WHQuBzQG8r&_r=1' target="_blank"> <TikTokIcon /> </a>
+             <a href='https://mobile.twitter.com/mehanhoura' target="_blank"> <TwitterIcon sx={{color: "white"}}/> </a>
           </span>
     </footer>
     </div>

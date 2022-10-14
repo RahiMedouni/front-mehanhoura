@@ -9,7 +9,7 @@ export const socials = [
   {
     outlet: "Facebook",
     href:
-      "https://www.facebook.com/sharer/sharer.php?u=http://localhost:3000/blog/The%2520good",
+      "https://www.facebook.com/sharer/sharer.php?u=https://dev.to/dsasse07/beginner-s-guide-to-jest-testing-in-react-1nig",
     background: "#3b5898",
     color: "white",
     label: "Share on Facebook",
@@ -26,7 +26,7 @@ export const socials = [
   },
 ];
 
-export default function ScrollToTop() {
+export default function ScrollToTop(props) {
   const [menuActive, setMenuActive] = useState(false);
   const handleToggleMenu = () => {
     setMenuActive((menuActive) => !menuActive);

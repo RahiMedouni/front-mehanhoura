@@ -9,7 +9,7 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import ShareIcon from '@mui/icons-material/Share';
 import { Link } from "react-router-dom";
-import ScrollToTop from "../ScrollToTop";
+import ShareArticle from "./ShareArticle";
 
 
 
@@ -26,7 +26,7 @@ export default function BlogCard(props) {
         }
         action={
           <IconButton aria-label="share">
-            <ScrollToTop />
+            <ShareArticle />
           </IconButton>
         }
         title={props.article.title}

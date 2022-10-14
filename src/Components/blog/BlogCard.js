@@ -9,13 +9,15 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import ShareIcon from '@mui/icons-material/Share';
 import { Link } from "react-router-dom";
+import ScrollToTop from "../ScrollToTop";
 
 
-export default function RecipeReviewCard(props) {
+
+export default function BlogCard(props) {
   
   return (
     <>
-    <Card sx={{ width: 345, height: 440, bgcolor: 'whitesmoke', marginBottom: 10  }}>
+    <Card sx={{ width: "30%", height: 440, bgcolor: 'whitesmoke', marginBottom: 10  }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: "#0040AA", color: "#FFD720", fontSize: 11, textAlign: "center" }} aria-label="recipe">
@@ -24,7 +26,7 @@ export default function RecipeReviewCard(props) {
         }
         action={
           <IconButton aria-label="share">
-            <ShareIcon />
+            <ScrollToTop />
           </IconButton>
         }
         title={props.article.title}

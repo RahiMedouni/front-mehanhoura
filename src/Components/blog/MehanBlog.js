@@ -1,7 +1,7 @@
 import ImageSlider from "./ImageSlider";
 import images from "./BlogCoverCard";
 import BlogCards from "./BlogCards";
-import Article from "./Article";
+import ArticleDetails from "./ArticleDetails";
 import React, { useState, useEffect } from "react";
 import { Routes, Route, useParams } from "react-router-dom";
 import AddArticle from "./AddArticle";
@@ -9,12 +9,12 @@ import AddArticle from "./AddArticle";
 
 
 
-const Articles = (props) => {
+const ArticlesDetails = (props, articles) => {
   let params = useParams();
-
+  console.log({ articles });
   return (
     <div>
-      <Article params={params} articles={props.articles} />
+      <ArticleDetails params={params} articles={props.articles} />
     </div>
   );
 };
@@ -89,16 +89,17 @@ const MehanBlog = () => {
           },
       ]);
 
-      const handleAddArticle = (newArticle) => {
-        setArticles([...articles, newArticle]);
-      };
+      // const handleAddArticle = (newArticle) => {
+      //   setArticles([...articles, newArticle]);
+      // };
 
       const BlogsCards = ({ articles, title }) => {
         return (
           <div>
             <BlogCards
             articles={articles}
-              handleAddArticle={handleAddArticle}
+              //handleAddArticle={handleAddArticle}
+              title={title}
             />
           </div>
         );
@@ -122,7 +123,7 @@ return (
     <Routes>
     <Route
               path="/blog/:title"
-              element={<Articles articles={articles} />}
+              element={<ArticlesDetails articles={articles} />}
             />
     </Routes>
     

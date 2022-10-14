@@ -1,21 +1,10 @@
 
-const Article = ({ params, articles }) => {
-  // const [questions, setQuestions] = useState([]);
+const ArticleDetails = ({ params, articles }) => {
 
   const article = articles.find((elt) => elt.title === params.title);
   console.log({ articles });
   return (
     <div>
-      {/* <div
-        style={{
-          display: "flex",
-          justifyContent: "flex-start",
-          alignItems: "center",
-          textAlign: "center",
-        }}
-      >
-        <h2>{article?.title}</h2>
-      </div> */}
       <img
         src={article?.coverUrl}
         alt="article's cover"
@@ -27,4 +16,4 @@ const Article = ({ params, articles }) => {
   );
 };
 
-export default Article;
+export default ArticleDetails;

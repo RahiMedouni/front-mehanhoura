@@ -1,10 +1,10 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./BlogCoverCard.css";
+import "./PartnersFooter.css";
 import React from 'react';
 
-const PartnersSlide = ({images}) => {
+const PartnersSlide = ({PartnersImages}) => {
 
 const settings = {
 	infinite: true,
@@ -21,19 +21,11 @@ autoplaySpeed: 1500,
 return (
 	<>
 	<section>
-	<div className="imgslider" style={{
-		marginLeft: 100,
-		marginTop: 0,
-		marginRight: 100,
-	}}>
+	<div className="imgslider">
 		<Slider {...settings}>
-		{images.map((item) => (
+		{PartnersImages.map((item) => (
 			<div key={item.id} className="container">
-			<img src={item.src} alt={item.alt} style={{
-				height: "20vh",
-				width: "50%",
-				marginTop: 50,
-			}} />
+			<img src={item.src} alt={item.alt} />
 			</div>
 		))}
 		</Slider>

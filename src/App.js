@@ -8,7 +8,6 @@ import {
 import HomePage from './Components/home page/HomePage';
 import React, { useEffect, useState } from 'react';
 import MehanBlog from './Components/blog/MehanBlog';
-import MehanBlogAdmin from './Components/blog/MehanBlogAdmin';
 import ContactUs from './Components/contact us/ContactUs';
 import images from "./Components/blog/BlogCoverCard";
 import CopyrightOutlinedIcon from '@mui/icons-material/CopyrightOutlined';
@@ -22,11 +21,6 @@ import CreateRequest from './Components/onDoing/CreateRequest';
 import Handymen from './Components/onDoing/Handymen';
 import Bricool from './Components/onDoing/bricool';
 import Promo from './Components/onDoing/Promo';
-import SignUpAdmin from "./Components/admins/SignUpAdmin";
-import SigninAdmin from "./Components/admins/SigninAdmin";
-import PopUp from './Components/PopUp';
-import PopUps from './Components/PopUps';
-import { useNavigate } from "react-router-dom";
 
 
 
@@ -46,62 +40,21 @@ const TikTokIcon = ({ color = "white" }) => {
 
 function App() {
 
-  const [accountType, setAccountType] = useState("");
-
-  const navigate = useNavigate();
-
-  // const [showVideo, setShowVideo] = useState(false);
-
-  // useEffect( () => {
-  //   setInterval( () => {
-  //     setShowVideo(!showVideo)
-  //   }, 5000 );
-  // }, []);
-
-//  const closeVideo = 
-
-const accountTypeHandler = (type) => {
-  setAccountType(type);
-};
-
-useEffect(() => {
-  let token = localStorage.getItem("token");
-  if (!token) navigate("/");
-}, []);
-
   return (
     <div className="App">
       <header className='navbarr'>
       < Navbar />
-      {/* {accountType === "admin" ? <PopUps /> : <PopUp/>} */}
       </header>
-      {/* <div>
-        { showVideo && <PopUp /> } 
-      </div>  */}
       <Routes>
       <Route path="/" element={< HomePage />} />
       <Route path="/about" element={< AboutUs />} />
-      <Route path="/blog" element={
-        accountType === "admin" ? (
-      < MehanBlogAdmin images={images} /> )
-      :(
-        < MehanBlog images={images} /> )
-      }
-      />
+      <Route path="/blog" element= {< MehanBlog images={images} />} />
       <Route path="/demandes" element={<CreateRequest />} />
       <Route path="/artisans" element={<Handymen />} />
       <Route path="/comment" element={<HowTo />} />
       <Route path="/bricool" element={<Bricool />} />
       <Route path="/promo" element={<Promo />} />
       <Route path="/contactus" element={<ContactUs />} />
-      <Route
-              path="/ramirahimazehitiornasignup"
-              element={<SignUpAdmin accountType={accountTypeHandler} />}
-            />
-            <Route
-              path="/ramirahimazehitiornasignin"
-              element={<SigninAdmin accountType={accountTypeHandler} />}
-            />
     </Routes>
 
     <footer style={{

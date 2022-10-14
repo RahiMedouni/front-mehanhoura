@@ -5,6 +5,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    z-index: 0;
 }
 
 .articlelist {
@@ -16,6 +17,7 @@
     align-items: center;
     margin-top: 50px;
     margin-bottom: 50px;
+    z-index: 0;
 }
 
 .hideText {

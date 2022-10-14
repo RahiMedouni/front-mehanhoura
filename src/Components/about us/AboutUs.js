@@ -2,7 +2,7 @@ import "./AboutUs.css";
 import Founders from "./Founders";
 import Interns from "./Interns";
 import PartnersSlide from "../partners/PartnersSlide";
-import images from "../partners/BlogCoverCard";
+import PartnersImages from "../partners/Partners";
 
   const AboutUs= () => {
 
@@ -17,7 +17,7 @@ import images from "../partners/BlogCoverCard";
         </section>
         <section className="secondsectionabout">
         <span className="sarlmehanhoura" >
-          <img src="../phone.png" alt="cover" />
+          <img src="../tinamira.svg" alt="cover" />
           <h1 align="center">Sarl Mehan Houra</h1>
           <p>On n’est jamais à l’abri d’une fuite au niveau de notre installation de plomberie, problème d'installation électrique ,un four qui reste froid alors qu’on essaye de préparer un repas de famille ou un frigo qui ne fonctionne plus et laisse tous les produits frais se perdre ...
 
@@ -75,16 +75,9 @@ Par un appel téléphonique sur : +213 6.56.29.87.02
         <section className="internsection">
           <Interns />
         </section>
-        <section style={{
-        marginTop: 0,
-        backgroundColor: "whitesmoke",
-        height: '40vh',
-        textAlign: "center",
-      }} className="secondsection">
+        <section className="partnerfooter">
          <PartnersSlide
-        images={images} style={{
-          marginTop: 50
-        }} />
+        PartnersImages={PartnersImages} />
         </section>
     </>
     );

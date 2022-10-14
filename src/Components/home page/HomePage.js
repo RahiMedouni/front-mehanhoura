@@ -2,7 +2,7 @@ import AndroidIcon from '@mui/icons-material/Android';
 import AppleIcon from '@mui/icons-material/Apple';
 import "./HomePage.css";
 import PartnersSlide from "../partners/PartnersSlide";
-import images from "../partners/BlogCoverCard";
+import PartnersImages from "../partners/Partners";
 
 const HomePage= () => {
 
@@ -59,17 +59,9 @@ const HomePage= () => {
       </span>
       </div>
         </section>
-        <section style={{
-        marginTop: 0,
-        backgroundColor: "whitesmoke",
-        height: '40vh',
-        textAlign: "center",
-        marginTop: -10
-      }}>
+        <section className="partnersfooter">
          <PartnersSlide
-        images={images} style={{
-          marginTop: 50
-        }} />
+        PartnersImages={PartnersImages} />
         </section>
     </div>
     );

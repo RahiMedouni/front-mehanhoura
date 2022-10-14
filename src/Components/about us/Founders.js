@@ -7,7 +7,7 @@ import "./AboutUs.css";
       <h1 align= "center" className="founderteam">Founders</h1>
       <div className="cofounders">
             <div className="founder">
-            <img src="../amira.jpeg" alt="cover" style={{
+            <img src="../amira.svg" alt="cover" style={{
               height: "40%",
               width: "40%",
               marginTop: 20}} />
@@ -16,7 +16,7 @@ import "./AboutUs.css";
             <p>automatics</p>
             </div>
             <div className="founder">
-            <img src="../zehor.jpeg" alt="cover" style={{marginTop: 20,
+            <img src="../zehor.svg" alt="cover" style={{marginTop: 20,
            height: "40%",
            width: "40%",
             }} />
@@ -25,7 +25,7 @@ import "./AboutUs.css";
             <p>automatics</p>
             </div>
             <div className="founder">
-            <img src="../abdellah.jpeg" alt="cover" style={{marginTop: 20,
+            <img src="../abdellah.svg" alt="cover" style={{marginTop: 20,
             height: "40%",
             width: "40%",
             }} />

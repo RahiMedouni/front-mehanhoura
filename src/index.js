@@ -7,6 +7,7 @@ import {
   BrowserRouter,
   Routes,
   Route,
+  HashRouter,
 } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

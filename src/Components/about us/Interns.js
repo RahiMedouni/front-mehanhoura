@@ -7,9 +7,9 @@ import "./AboutUs.css";
       <h1 align= "center" className="team">Team</h1>
       <div className="cointerns">
             <div className="intern">
-            <img src="../rahim.jpeg" alt="cover" style={{
+            <img src="../rahim.svg" alt="cover" style={{
               height: "40%",
-              width: "50%",
+              width: "40%",
               marginTop: 20}} />
             <h1>Medouni Abderrahim</h1>
             <p>Sales intern</p>
@@ -25,18 +25,18 @@ import "./AboutUs.css";
             <p>Marketing</p>
             </div>
             <div className="intern">
-            <img src="../kawther.jpeg" alt="cover" style={{marginTop: 20,
+            <img src="../kawther.svg" alt="cover" style={{marginTop: 20,
             height: "40%",
-            width: "50%",
+            width: "40%",
             }} />
             <h1>Kawther Rahmani</h1>
             <p>Sales intern</p>
             <p>Physics</p>
-            </div>
+            </div> <br />
             <div className="intern">
-            <img src="../.jpeg" alt="raouf picture" style={{marginTop: 20,
+            <img src="../raouf.jpeg" alt="raouf" style={{marginTop: 20,
            height: "40%",
-           width: "50%",
+           width: "40%",
             }} />
             <h1>Abderraouf Bessai</h1>
             <p>Designer intern</p>
@@ -45,7 +45,7 @@ import "./AboutUs.css";
             <div className="intern">
             <img src="../.jpeg" alt="ahlem picture" style={{marginTop: 20,
             height: "40%",
-            width: "50%",
+            width: "40%",
             }} />
             <h1>Ahlam dreams</h1>
             <p>Comunity manager intern</p>

@@ -70,7 +70,7 @@
       align-items: center;
       width: 100%;
       text-align: center;
-      letter-spacing: 3.5px;
+      letter-spacing: 3px;
       font-weight: bolder;
   }
 
@@ -134,7 +134,7 @@
   }
   
   .textpub {
-    margin-top: 50px;
+    margin-top: 150px;
     margin-left: 25px;
     margin-right: 25px;
     width: 80%;
@@ -153,9 +153,14 @@
     margin: 0px 0px 24px;
     text-align: justify;
   }
-  
-  
-  
+
+  .partnersfooter {
+    margin-top: -10px;
+    background-color: whitesmoke;
+    height: 20vh;
+    text-align: center;
+  }
+
   .thirdsection {
       z-index: 0,
   }
@@ -286,6 +291,14 @@
     
       .spandiv {
         font-size: 48px;
+      }
+
+      .partnersfooter {
+        margin-top: -10px;
+        background-color: whitesmoke;
+        height: 40vh;
+        text-align: center;
+        margin-bottom: 0px;
       }
     
       .textdiv:first-of-type{

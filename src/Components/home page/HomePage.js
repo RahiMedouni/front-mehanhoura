@@ -24,7 +24,7 @@ const HomePage= () => {
       </div>
       <h3 className="downloadapp">Download The App</h3>
       <div>
-      <a href="https://www.mehanhoura.com/" target="_blank"><button className="androidbtn">
+      <a href="https://play.google.com/store/apps/details?id=com.mehanhoura.mehanhoura&hl=en&gl=US" target="_blank"><button className="androidbtn">
           <span className='btnspan'>Android version <AndroidIcon className="icons" /></span>
         </button></a>
       <button disabled= {true} className="iosbtn">
@@ -49,7 +49,7 @@ const HomePage= () => {
           <div>
       <span style={{ display: "flex", flexDirection: "row", float: "right" }}>
         <div className="btndiv">
-        <a href="https://www.mehanhoura.com/" target="_blank"><button className="androidbtn">
+        <a href="https://play.google.com/store/apps/details?id=com.mehanhoura.mehanhoura&hl=en&gl=US" target="_blank"><button className="androidbtn">
           <span className='btnspan'>Android version <AndroidIcon/></span>
           </button></a>
       <button disabled= {true} className="iosbtn"> <span className='btnspan'>IOS version <AppleIcon/></span></button>
@@ -59,6 +59,9 @@ const HomePage= () => {
       </span>
       </div>
         </section>
+        <div>
+        <h1 align="center" style={{marginTop: -200, color: "#0040AA"}}>Nos Partenaires</h1>
+        </div>
         <section className="partnersfooter">
          <PartnersSlide
         PartnersImages={PartnersImages} />

@@ -6,10 +6,9 @@ import ShareIcon from '@mui/icons-material/Share';
 import { useState } from "react";
 
 export const socials = [
+ // https://web.facebook.com/sharer.php?u=https%3A%2F%2Fwww.housecallpro.com%2Fresources%2Fmarketing%2Fthe-cost-of-running-an-hvac-business%2F&_rdc=1&_rdr
   {
     outlet: "Facebook",
-    href:
-      "https://www.facebook.com/sharer/sharer.php?u=https://dev.to/dsasse07/beginner-s-guide-to-jest-testing-in-react-1nig",
     background: "#3b5898",
     color: "white",
     label: "Share on Facebook",
@@ -17,8 +16,6 @@ export const socials = [
   },
   {
     outlet: "Twitter",
-    href:
-      "https://twitter.com/intent/tweet?url=https://dev.to/dsasse07/beginner-s-guide-to-jest-testing-in-react-1nig&text=Beginner's%20Guide%20to%20Jest%20Testing%20in%20React&via=dannysasse",
     background: "#00aced",
     color: "white",
     label: "Share on Twitter",
@@ -36,7 +33,7 @@ export default function ScrollToTop(props) {
     return (
       <SocialLink
         as="a"
-        href={social.href}
+        href={props.fbLink}
         target="_blank"
         rel="noreferrer"
         aria-label={social.label}

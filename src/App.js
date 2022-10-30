@@ -4,6 +4,7 @@ import Navbar from './Components/navbar/Navbar';
 import {
   Routes,
   Route,
+  useParams,
 } from "react-router-dom";
 import HomePage from './Components/home page/HomePage';
 import React, { useEffect, useState } from 'react';
@@ -21,6 +22,10 @@ import CreateRequest from './Components/onDoing/CreateRequest';
 import Handymen from './Components/onDoing/Handymen';
 import Bricool from './Components/onDoing/bricool';
 import Promo from './Components/onDoing/Promo';
+import ArticleDetails from "./Components/blog/ArticleDetails";
+import { Provider } from "react-redux";
+import store from "./store/index";
+
 
 
 
@@ -38,9 +43,43 @@ const TikTokIcon = ({ color = "white" }) => {
   );
 };
 
+const ArticlesDetails = (props, articles) => {
+  let params = useParams();
+  console.log({ articles });
+  return (
+    <div>
+      <ArticleDetails params={params} articles={props.articles} />
+    </div>
+  );
+};
+
 function App() {
 
+  const [articles, setArticles] = useState([
+    {
+      title: "Le Ramonage",
+      description: "Le ramonage des conduits de fumées",
+      articleImage:"../chemini.svg",
+      category: "Électro-méager",
+      content: "Le ramonage des conduits de fumées  : une nécessité absolue avant l'arrivée de l'hiver, Malgré les campagnes de sensibilisation continue, le ramonage des cheminées et des conduits de fumées fait partie des tâches ignorées par les familles algériennes, bien qu'il entraîne malheureusement de nombreuses catastrophes chaque année . En plus de l'entretien des appareils de chauffage, il faut veiller à ramoner les cheminées et les bouches d'aération des maisons et des  immeubles , par le nettoyage de la paroi intérieur des conduits  pour éliminer les suies et les dépôts de cendres accumulés tout au long de la saison de chauffe, ou encore les nids d'oiseaux qui prennent  ces canaux comme refuge. Le ramonage des cheminées a plusieurs avantages tels que éviter le danger des incendies, car les dépôts de cendres et d'autres particules le long du conduit peuvent s'embraser et propagent l'incendie au reste de la maison. On peut aussi éviter l'intoxication  au monoxyde de carbone; ce tueur silencieux qui fait chaque année des centaines de victimes, car sans un nettoyage adéquat des conduits de fumées les  particules de ce  gaz toxique  s'accumulent  à l'intérieur de la maison au lieu de  s’évacuer à l'extérieur. Du côté économique, le nettoyage constant de ces cheminées garantit le bon fonctionnement des appareils de chauffage, ce qui prolonge leur durée de vie. C'est pourquoi nous vous conseillons de se préparer à  l'hiver par l'effectuation de  cette tâche par un artisan spécialiste  .Vous pouvez désormais chercher l'artisan le plus proche de votre lieu de résidence grâce à notre application 'mehan houra' ",
+      date: "04/10/2022",
+      fbLink: "https://www.facebook.com/sharer/sharer.php?u=https://www.housecallpro.com/resources/marketing/the-cost-of-running-an-hvac-business/",
+
+    },
+    {
+      title: "Les symptômes de l'intoxication au monoxyde de carbone",
+      description: "L'hiver se rapproche, et  le danger d'intoxication au monoxyde",
+      articleImage: "../symtompts.svg",
+      category: "plomberie",
+      content: "L'hiver se rapproche, et  le danger d'intoxication au monoxyde de carbone revient sur le devant de la scène. Malgré les campagnes de sensibilisation lancées par les autorités responsables, on entend à chaque fois de nombreuses histoires tristes de victimes dont le nombre augmente chaque année. Le monoxyde de carbone  est un gaz incolore qui peut provenir de l'un des éléments suivants : 🔴Chauffe-eau 🔴 Cheminée 🔴Cheminée traditionnelle 🔴 Les cuisinières  Pour prévenir les dangers de ces appareils, il faut éviter : ✅le manque d'aération ✅l'Absence de suivi périodique des appareils  ✅l'Utilisation de matériel non conforme aux normes de sécurité ✅l'Utilisation d'appareils non destinés au chauffage 🔹Pour éviter ce danger, vous pouvez vous renseigner sur ses causes, les symptômes d'inhalation et les méthodes de prévention dans la publication suivante",
+      date: "04/10/2022",
+      fbLink: "https://www.facebook.com/sharer/sharer.php?u=https://www.housecallpro.com/resources/marketing/the-cost-of-running-an-hvac-business/",
+
+    },
+  ]);
+
   return (
+    <Provider store={store}>
     <div className="App">
       <header className='navbarr'>
       < Navbar />
@@ -55,6 +94,10 @@ function App() {
       <Route path="/bricool" element={<Bricool />} />
       <Route path="/promo" element={<Promo />} />
       <Route path="/contactus" element={<ContactUs />} />
+      <Route
+          path="/blog/:title"
+          element={<ArticlesDetails articles={articles} />}
+        />
     </Routes>
 
     <footer style={{
@@ -128,6 +171,7 @@ function App() {
           </span>
     </footer>
     </div>
+    </Provider>
   );
 }
 

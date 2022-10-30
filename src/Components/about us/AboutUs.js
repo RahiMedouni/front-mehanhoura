@@ -18,7 +18,7 @@ import PartnersImages from "../partners/Partners";
         <section className="secondsectionabout">
         <span className="sarlmehanhoura" >
           <img src="../tinamira.svg" alt="cover" />
-          <h1 align="center">Sarl Mehan Houra</h1>
+          <h1 align="center">SARL Mehan Houra</h1>
           <p>On n’est jamais à l’abri d’une fuite au niveau de notre installation de plomberie, problème d'installation électrique ,un four qui reste froid alors qu’on essaye de préparer un repas de famille ou un frigo qui ne fonctionne plus et laisse tous les produits frais se perdre ...
 
 Que faire à ce moment-là ?
@@ -69,12 +69,15 @@ Par un appel téléphonique sur : +213 6.56.29.87.02
         </span>
         </section>
 
-        <section className="thirdsection">
+        <section className="foundersection">
           <Founders />
         </section>
         <section className="internsection">
           <Interns />
         </section>
+        <div>
+        <h1 align="center" style={{marginTop: -200, color: "#0040AA"}}>Nos Partenaires</h1>
+        </div>
         <section className="partnerfooter">
          <PartnersSlide
         PartnersImages={PartnersImages} />

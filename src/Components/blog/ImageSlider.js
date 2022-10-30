@@ -8,14 +8,14 @@ const ImageSlider = ({images}) => {
 
 const settings = {
 	infinite: true,
-	arrows: false,
+	arrows: true,
 	dots: true,
 	slidesToShow: 1,
 	slidesToScroll: 1,
 	lazyLoad: true,
 	slickPrev: true,
 	autoplay: true,
-autoplaySpeed: 2000,
+autoplaySpeed: 5000,
 
 };
 return (
@@ -32,7 +32,7 @@ return (
 			<img src={item.src} alt={item.alt} style={{
 				height: "48.7vh",
 				width: "100%",
-				marginTop: 100
+				marginTop: 100,
 			}} />
 			<div className="top-left">
 			<h1>article title</h1>

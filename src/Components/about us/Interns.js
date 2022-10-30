@@ -32,9 +32,9 @@ import "./AboutUs.css";
             <h1>Kawther Rahmani</h1>
             <p>Sales intern</p>
             <p>Physics</p>
-            </div> <br />
+            </div>
             <div className="intern">
-            <img src="../raouf.jpeg" alt="raouf" style={{marginTop: 20,
+            <img src="../raoufsvg.svg" alt="raouf" style={{marginTop: 20,
            height: "40%",
            width: "40%",
             }} />
@@ -43,7 +43,7 @@ import "./AboutUs.css";
             <p>something hard to remember</p>
             </div>
             <div className="intern">
-            <img src="../.jpeg" alt="ahlem picture" style={{marginTop: 20,
+            <img src="../ahlam.svg" alt="ahlem picture" style={{marginTop: 20,
             height: "40%",
             width: "40%",
             }} />

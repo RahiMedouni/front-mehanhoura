@@ -324,40 +324,36 @@ header nav {
         height: 50px;
       }
 
-      .navv {
-        display: none;
-      }
-
-        /* Links inside the navbar */
+        /* Links inside the navbar
   .navlinks a {
     float: left;
-    font-size: 14px;
-    width: 80px;
+    font-size: 9px;
+    width: 20px;
     color: #FFD720;
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     text-decoration: none;
-    padding: 25px 10px;
+    padding: 10px 5px;
     font-weight: bold;
-  }
+  } */
   
   /* The dropdown container */
   .dropdown {
     float: left;
     overflow: hidden;
-    font-size: 14px;
+    font-size: 9px;
     margin-bottom: 5px;
     font-weight: bold;
   }
 
   /* Dropdown button */
   .dropdown .dropbtn {
-    font-size: 14px;
+    font-size: 9px;
     font-weight: bold;
     border: none;
     outline: none;
     color: #FFD720;
-    padding: 25px 10px;
+    padding: 10px 5px;
     background-color: inherit;
     font: inherit; /* Important for vertical align on mobile phones */
     margin: 0; /* Important for vertical align on mobile phones */
@@ -376,7 +372,7 @@ header nav {
 
   .dropdown:hover .down {
     border: solid #0040AA;
-    border-width: 0 3px 3px 0;
+    border-width: 0 1px 1px 0;
   }
 
   .down {
@@ -457,15 +453,15 @@ header nav {
         margin-right: 0px;
         top: 50%;
         font-weight: bold;
-        font-size: 20px;
+        font-size: 11px;
     }
 
     .iconlogo {
       float: left;
       margin-left: 0px;
       top: 50%;
-      height: 26.38px;
-      width: 83.7px;
+      height: 13.38px;
+      width: 43.7px;
     }
 
     .androis {
@@ -597,13 +593,13 @@ header nav {
 
     .navlinks a {
       float: left;
-      font-size: 14px;
-      width: 80px;
+      font-size: 9px;
+      width: 30px;
       color: #FFD720;
       text-align: center;
-      margin-bottom: 10px;
+      margin-bottom: 0px;
       text-decoration: none;
-      padding: 25px 10px;
+      padding: 10px 5px;
       font-weight: bold;
     }
 

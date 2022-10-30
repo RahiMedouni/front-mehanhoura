@@ -6,16 +6,35 @@ import LanguageIcon from '@mui/icons-material/Language';
 import { animateScroll } from 'react-scroll';
 import AndroidIcon from '@mui/icons-material/Android';
 import AppleIcon from '@mui/icons-material/Apple';
+import { useTranslation } from 'react-i18next';
 
-  
-  const Navbar = (scrollToTop) => {
+import { connect } from "react-redux";
+
+  const Navbar = ({scrollToTop,language, changeLang} ) => {
+    const [Lang, setLang] = useState(language)
+    const { t, i18n } = useTranslation();
+
+
+    useEffect(() => {
+      i18n.changeLanguage(Lang)
+      changeLang(Lang)
+    }, [Lang])
+    
+
+
+    console.log("state language  : " + Lang)
+    console.log("reedux language: " + language)
 
     const [colornav, setColornav] = useState(false);
-    const [isResponsive, setIsResponsive] = useState(false);
+    const [open, setOpen] = useState(false);
 
-    const openMenu = () => {
-      setIsResponsive(!isResponsive);
-    };
+	const handleClick = () => {
+		setOpen(!open);
+	};
+
+	const closeMenu = () => {
+		setOpen(false);
+	};
 
     
 useEffect(() => {
@@ -45,9 +64,14 @@ useEffect(() => {
         <span onClick={scrollToTop}> <Link to="/"><img src="../logotrans.png" className="iconlogo"/> </Link> </span>
        <span   onClick={scrollToTop}> <Link to="/"><h2 className="logo">Mehan Houra</h2></Link> </span>
         </div>
-        <nav className={
-          isResponsive ? "navv responsive" : "navv"
-        }>
+		<button className="icon" style={{
+        marginLeft: 10,
+        marginTop: 15,
+        backgroundColor: "transparent",
+        color: "#FDD720"}} >
+      &#8801; </button>
+        <nav className={open ? 'navv active' : 'navv'}>
+
         <div className="navlinks">
         <span   onClick={scrollToTop}><Link to="/about/">About Us</Link></span>
         </div>
@@ -75,16 +99,11 @@ useEffect(() => {
       </div>
       <div className="navlinks">
       <span   onClick={scrollToTop}> <Link to="/blog/">Blog</Link> </span>
-      <span onClick={scrollToTop}><Link to="/contactus/">Contact Us</Link></span>
+      <span onClick={scrollToTop}><Link to="/contactus/">{t('Contact Us')}</Link></span>
       <span onClick={scrollToTop}><Link to="/comment/">How To?</Link></span>
         </div>
         </nav>
-        <button className="icon" style={{
-        marginLeft: 10,
-        marginTop: 15,
-        backgroundColor: "transparent",
-        color: "#FDD720"}} onClick={openMenu}>
-      &#8801; </button>
+        
       <div className="androidios">
       <a href="https://www.mehanhoura.com/" target="_blank"><button className="iconandroid" ><AndroidIcon style={{fontSize: 11}} /></button></a>
       <button disabled= {true} className="iconios"><AppleIcon style={{fontSize: 11}} /></button>
@@ -94,9 +113,13 @@ useEffect(() => {
         <div className="langdropdown-contentp" style={{ marginRight: 20 }} >
             <div className="langcolumnp">
               <div className="langbricoolp">
-              <a href="#">Ar</a>
-              <a href="#">En</a>
-              <a href="#">Fr</a>
+              <a href="#" 
+              onClick={()=>{
+                setLang("en")
+               } }>en</a>
+              <a href="#" onClick={()=>{
+                setLang("fr")    
+                }}>fr</a>
               </div>
             </div>
         </div>
@@ -110,14 +133,22 @@ useEffect(() => {
       </span>
       </div>
       <div className="langdropdown">
-        <button className="langdropbtn"> En <LanguageIcon style={{marginLeft: 5 }}/></button>
+        <button className="langdropbtn">{language} <LanguageIcon style={{marginLeft: 5 }}/></button>
         <div className="langdropdown-content">
           <div className="langrow">
             <div className="langcolumn">
               <div className="langbricool">
-              <a href="#">Ar</a>
-              <a href="#">En</a>
-              <a href="#">Fr</a>
+              <div className="langcolumnp">
+              <div className="langbricoolp">
+              <a href="#" 
+              onClick={()=>{
+                setLang("en")
+               } }>en</a>
+              <a href="#" onClick={()=>{
+                setLang("fr")    
+                }}>fr</a>
+              </div>
+            </div>
               </div>
             </div>
           </div>
@@ -128,78 +159,19 @@ useEffect(() => {
     );
   };
   
-  export default Navbar;
-  
-  // <LanguageIcon />
+  const mapStateToProps = (state) => {
+    return {
+      language: state.language,
+    };
+  };
+
+  const mapDispatchToProps = (dispatch) => {
+    return {
+      changeLang: (lang) =>
+        dispatch({ type: "CHANGE_LANGUAGE", payload: lang }),
+
+    };
+  };
 
 
-
-//   return (
-//     <nav>
-//       <div className="topnav" id="myTopnav">
-//         <a href="#home" className="active">
-//           Home
-//         </a>
-//         <a href="#news">News</a>
-//         <a href="#contact">Contact</a>
-//         <a href="#about">About</a>
-//         <a href="javascript:void(0);" className="icon" onClick={myFunction}>
-//           <i className="fa fa-bars"></i>
-//         </a>
-//       </div>
-//     </nav>
-//   );
-// }
-
-// export default Header;
-
-
-// .topnav {
-//   overflow: hidden;
-//   background-color: black;
-// }
-
-// .topnav a {
-//   float: left;
-//   display: block;
-//   color: #f2f2f2;
-//   text-align: center;
-//   padding: 14px 16px;
-//   text-decoration: none;
-//   font-size: 17px;
-// }
-
-// .topnav a:hover {
-//   background-color: #ddd;
-//   color: black;
-// }
-
-// .topnav .icon {
-//   display: none;
-// }
-
-// @media screen and (max-width: 600px) {
-//   .topnav a {
-//     display: none;
-//   }
-//   .topnav a.icon {
-//     float: right;
-//     display: block;
-//   }
-// }
-
-// @media screen and (max-width: 600px) {
-//   .topnav.responsive {
-//     position: relative;
-//   }
-//   .topnav.responsive .icon {
-//     position: absolute;
-//     right: 0;
-//     top: 0;
-//   }
-//   .topnav.responsive a {
-//     float: none;
-//     display: block;
-//     text-align: left;
-//   }
-// }
+  export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

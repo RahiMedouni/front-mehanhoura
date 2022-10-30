@@ -1,7 +1,7 @@
 import "./BlogCards.css";
 import BlogCard from "./BlogCard"
 
-const BlogCards = (props) => {
+const BlogCards = (props, scrollToTop) => {
 
 return (
     <div className="blogcards">
@@ -11,6 +11,7 @@ return (
           index={index}
           key={index}
           article={article}
+          scrollToTop={scrollToTop}
         />
       ))}
         </span>

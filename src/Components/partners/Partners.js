@@ -5,17 +5,17 @@ const PartnersImages = [{
 },
 {
   id: 2,
-  src: "../asff.svg",
+  src: "../asf.jpeg",
   alt: "Image 2 "
 },
 {
   id: 3,
-  src: "../ooredoo.svg",
+  src: "../newooredoo.svg",
   alt: "Image 3"
 },
 {
   id: 4,
-  src: "../amiafrica.svg",
+  src: "../worldlearningsvg.svg",
   alt: "Image 2 "
 },
 {
@@ -25,18 +25,23 @@ const PartnersImages = [{
 },
 {
   id: 6,
-  src: "../algeriaventure.svg",
+  src: "../algventure.svg",
   alt: "Image 2 "
 }
 ,
 {
   id: 7,
-  src: "../emerging.svg",
+  src: "../emerginsvg.svg",
   alt: "Image 2 "
 },
 {
   id: 8,
-  src: "../googleforstartups.svg",
+  src: "../googleforsvg.svg",
+  alt: "Image 2 "
+},
+{
+  id: 8,
+  src: "../foundersvg.svg",
   alt: "Image 2 "
 }
 ];
